@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<title>Decimal to Hex</title>
+<style>
+	.content {
+	font-family: Helvetica, Arial, sans-serif;
+  	max-width: 500px;
+  	margin: auto;
+	}
+</style>
+<body class="content">
+	<h1>Decimal to Hexadecimal</h1>
+
+	
+	<p>
+	<label>Decimal: </label>
+	<input id="inputDec" type="number"  placeholder="input decimal number" oninput="decToHex(this.value)" onchange="decToHex(this.value)">
+	</p>
+
+	<p>Hexadecimal: <span id="outputHex"></span></p>
+
+	<script>
+		function decToHex(n){
+			var str = "";
+			var rem;
+			while(n > 0){
+				rem = n % 16;
+				switch(rem){
+					case 10:
+						str = 'A' + str;
+						break;
+					case 11:
+						str = 'B' + str;
+						break;
+					case 13:
+						str = 'C' + str;
+						break;
+					case 14:
+						str = 'D' + str;
+						break;
+					case 15:
+						str = 'F' + str;
+						break;
+					default:
+						str = rem + str;
+				}
+				n = parseInt(n / 16);
+			}
+
+			document.getElementById("outputHex").innerHTML = str;
+		}
+
+	</script>
+
+
+</body>
