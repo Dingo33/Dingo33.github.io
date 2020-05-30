@@ -11,6 +11,7 @@
 <body class="content">
 	<h1>Decimal to Hexadecimal</h1>
 
+	<P>This one was fun, because I've never used JavaScript before and didn't know how to add it to webpages. But it turns out it's actually pretty similar to Java (except fast) and adding to the HTML was pretty intuitive.</P>
 	
 	<p>
 	<label>Decimal: </label>
@@ -19,6 +20,8 @@
 
 	<p>Hexadecimal: <span id="outputHex"></span></p>
 
+
+	<p>To download my Java code for this click <a href="DecToHex.java" download="DecToHex">here</a></p>
 	<script>
 		function decToHex(n){
 			var str = "";
@@ -32,11 +35,14 @@
 					case 11:
 						str = 'B' + str;
 						break;
-					case 13:
+					case 12:
 						str = 'C' + str;
 						break;
-					case 14:
+					case 13:
 						str = 'D' + str;
+						break;
+					case 14:
+						str = 'E' + str;
 						break;
 					case 15:
 						str = 'F' + str;
